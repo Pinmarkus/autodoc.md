@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUTODOC - Service Auto și Piese Auto</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>AUTODOC - Service Auto și Piese Auto</title>
 </head>
 <body>
     <!-- Header Section -->
@@ -87,27 +88,45 @@
                     <input type="text" id="car-model" name="car-model" required>
                 </div>
                 <div class="form-group">
-                    <label for="carType" data-i18n="booking.carType">Tip mașină</label>
-                    <div class="custom-select">
-                        <select id="carType" name="carType" required>
-                            <option value="" data-i18n="booking.selectCar">Selectează tipul mașinii</option>
-                            <option value="sedan">🚗 Sedan</option>
-                            <option value="suv">🚙 SUV</option>
-                            <option value="hatchback">🚐 Hatchback</option>
-                            <option value="coupe">🏎️ Coupe</option>
-                            <option value="wagon">🚚 Wagon</option>
-                        </select>
+                    <label data-i18n="booking.carType">Tip mașină</label>
+                    <div class="service-options">
+                        <div class="service-option">
+                            <input type="radio" id="sedan" name="carType" value="sedan" required>
+                            <label for="sedan">🚗 Sedan</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="suv" name="carType" value="suv">
+                            <label for="suv">🚙 SUV</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="hatchback" name="carType" value="hatchback">
+                            <label for="hatchback">🚐 Hatchback</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="coupe" name="carType" value="coupe">
+                            <label for="coupe">🏎️ Coupe</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="wagon" name="carType" value="wagon">
+                            <label for="wagon">🚚 Wagon</label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="serviceType" data-i18n="booking.serviceType">Tip serviciu</label>
-                    <div class="custom-select">
-                        <select id="serviceType" name="serviceType" required>
-                            <option value="" data-i18n="booking.selectService">Selectează serviciul</option>
-                            <option value="diagnostic">🔧 Diagnosticare</option>
-                            <option value="repair">🔨 Reparații</option>
-                            <option value="maintenance">⚡ Întreținere</option>
-                        </select>
+                    <label data-i18n="booking.serviceType">Tip serviciu</label>
+                    <div class="service-options">
+                        <div class="service-option">
+                            <input type="radio" id="diagnostic" name="serviceType" value="diagnostic" required>
+                            <label for="diagnostic">🔧 Diagnosticare</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="repair" name="serviceType" value="repair">
+                            <label for="repair">🔨 Reparații</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="radio" id="maintenance" name="serviceType" value="maintenance">
+                            <label for="maintenance">⚡ Întreținere</label>
+                        </div>
                     </div>
                 </div>
                 <!-- Honeypot -->
