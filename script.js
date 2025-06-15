@@ -2,6 +2,7 @@
 const translations = {
     ro: {
         // Navigation
+        'nav.home': 'Acasă',
         'nav.services': 'Servicii',
         'nav.booking': 'Programare',
         'nav.contact': 'Contact',
@@ -71,6 +72,7 @@ const translations = {
     },
     en: {
         // Navigation
+        'nav.home': 'Home',
         'nav.services': 'Services',
         'nav.booking': 'Booking',
         'nav.contact': 'Contact',
@@ -140,6 +142,7 @@ const translations = {
     },
     ru: {
         // Navigation
+        'nav.home': 'Главная',
         'nav.services': 'Услуги',
         'nav.booking': 'Запись',
         'nav.contact': 'Контакты',

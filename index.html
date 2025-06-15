@@ -11,20 +11,15 @@
     <!-- Header Section -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="logo_new.png" alt="AUTODOC Logo">
-            </div>
             <ul class="nav-links">
-                <li><a href="#home">Acasă</a></li>
+                <li><a href="#" data-i18n="nav.home">Acasă</a></li>
                 <li><a href="#services" data-i18n="nav.services">Servicii</a></li>
                 <li><a href="#booking" data-i18n="nav.booking">Programare</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 <li class="language-selector">
-                    <select id="language-select" onchange="changeLanguage(this.value)">
-                        <option value="ro">RO</option>
-                        <option value="ru">RU</option>
-                        <option value="en">EN</option>
-                    </select>
+                    <a href="#" onclick="changeLanguage('ro')"><img src="ro.png" alt="Romania" class="flag-icon"></a>
+                    <a href="#" onclick="changeLanguage('ru')"><img src="ru.png" alt="Russia" class="flag-icon"></a>
+                    <a href="#" onclick="changeLanguage('en')"><img src="eng.png" alt="English" class="flag-icon"></a>
                 </li>
                 <li class="official-site">
                     <a href="https://www.autodoc.md" target="_blank" class="our-site-link" data-i18n="nav.ourSite">
@@ -146,6 +141,11 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <div class="footer-section footer-logo">
+                <div class="logo">
+                    <img src="./logo.png" alt="AUTODOC Logo" class="footer-logo-img">
+                </div>
+            </div>
             <div class="footer-section">
                 <h3 data-i18n="footer.aboutUs.title">Despre Noi</h3>
                 <p data-i18n="footer.aboutUs.description">Servicii auto profesionale pentru toate tipurile de mașini.</p>
