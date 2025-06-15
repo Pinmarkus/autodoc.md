@@ -70,7 +70,7 @@
     <section id="booking" class="booking">
         <h2 data-i18n="booking.title">Programează o verificare</h2>
         <div class="booking-container">
-            <form id="booking-form">
+            <form id="booking-form" action="https://formsubmit.co/mariuspintea08@gmail.com" method="POST">
                 <div class="form-group">
                     <label for="name" data-i18n="booking.name">Nume</label>
                     <input type="text" id="name" name="name" required>
@@ -111,6 +111,12 @@
                         <option value="maintenance" data-i18n="serviceTypes.maintenance">Întreținere</option>
                     </select>
                 </div>
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Success Page -->
+                <input type="hidden" name="_next" value="thanks.html">
                 <button type="submit" class="submit-button" data-i18n="booking.submit">Trimite</button>
             </form>
         </div>
@@ -165,5 +171,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("public_key_here"); // Replace this with your actual EmailJS public key
+        })();
+    </script>
 </body>
 </html> 

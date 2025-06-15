@@ -270,8 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission handling
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Get form data
             const formData = {
                 name: document.getElementById('name').value,
@@ -284,32 +282,14 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             if (!validateForm(formData)) {
+                e.preventDefault();
                 return;
             }
 
-            // Create email body
-            const emailBody = `
-                New Booking Request:
-                
-                Name: ${formData.name}
-                Phone: ${formData.phone}
-                Email: ${formData.email}
-                Car Brand: ${formData.carBrand}
-                Car Model: ${formData.carModel}
-                Car Type: ${formData.carType}
-                Service Type: ${formData.serviceType}
-            `;
-
-            // Create mailto link
-            const mailtoLink = `mailto:mariuspintea08@gmail.com?subject=New Booking Request&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Redirect to thank you page after a short delay
-            setTimeout(() => {
-                window.location.href = 'thanks.html';
-            }, 1000);
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
         });
     }
 
