@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTODOC - Service Auto și Piese Auto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo_new.png" alt="AUTODOC Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#services" data-i18n="nav.services">Servicii</a></li>
+                <li><a href="#booking" data-i18n="nav.booking">Programare</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="language-selector">
+                    <select id="language-select" onchange="changeLanguage(this.value)">
+                        <option value="ro">RO</option>
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
+                    </select>
+                </li>
+                <li class="official-site">
+                    <a href="https://www.autodoc.md" target="_blank" class="our-site-link" data-i18n="nav.ourSite">
+                        <i class="fas fa-globe"></i> <span class="site-text">Our Site</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Bine ați venit la AUTODOC</h1>
+            <p data-i18n="hero.subtitle">Servicii profesionale de service auto în Chișinău</p>
+            <a href="#booking" class="cta-button" data-i18n="hero.cta">Programează o verificare</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 data-i18n="services.title">Serviciile Noastre</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-car"></i>
+                <h3 data-i18n="services.diagnostic.title">Diagnosticare</h3>
+                <p data-i18n="services.diagnostic.description">Verificare completă a sistemului electronic al mașinii</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3 data-i18n="services.repair.title">Reparații</h3>
+                <p data-i18n="services.repair.description">Reparații de calitate pentru toate mărcile de mașini</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-oil-can"></i>
+                <h3 data-i18n="services.maintenance.title">Întreținere</h3>
+                <p data-i18n="services.maintenance.description">Servicii de întreținere regulată și schimb de ulei</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <h2 data-i18n="booking.title">Programează o verificare</h2>
+        <div class="booking-container">
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="booking.name">Nume</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-i18n="booking.phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="booking.email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-brand" data-i18n="booking.carBrand">Marca mașinii</label>
+                    <input type="text" id="car-brand" name="car-brand" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-model" data-i18n="booking.carModel">Modelul mașinii</label>
+                    <input type="text" id="car-model" name="car-model" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-type" data-i18n="booking.carType">Tip mașină</label>
+                    <select id="car-type" name="car-type" required>
+                        <option value="" data-i18n="booking.selectCar">Selectează tipul mașinii</option>
+                        <option value="sedan" data-i18n="carTypes.sedan">Sedan</option>
+                        <option value="suv" data-i18n="carTypes.suv">SUV</option>
+                        <option value="hatchback" data-i18n="carTypes.hatchback">Hatchback</option>
+                        <option value="coupe" data-i18n="carTypes.coupe">Coupe</option>
+                        <option value="wagon" data-i18n="carTypes.wagon">Wagon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-type" data-i18n="booking.serviceType">Tip serviciu</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="" data-i18n="booking.selectService">Selectează serviciul</option>
+                        <option value="diagnostic" data-i18n="serviceTypes.diagnostic">Diagnosticare</option>
+                        <option value="repair" data-i18n="serviceTypes.repair">Reparații</option>
+                        <option value="maintenance" data-i18n="serviceTypes.maintenance">Întreținere</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button" data-i18n="booking.submit">Trimite</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 data-i18n="contact.title">Contact</h2>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3 data-i18n="contact.phone.title">Telefon</h3>
+                    <p data-i18n="contact.phone.value">022 844-550</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3 data-i18n="contact.email.title">Email</h3>
+                    <p data-i18n="contact.email.value">contact@autodoc.md</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.aboutUs.title">Despre Noi</h3>
+                <p data-i18n="footer.aboutUs.description">Servicii auto profesionale pentru toate tipurile de mașini.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.schedule.title">Program</h3>
+                <p data-i18n="footer.schedule.weekdays">Luni - Vineri: 8:00 - 18:00</p>
+                <p data-i18n="footer.schedule.saturday">Sâmbătă: 9:00 - 14:00</p>
+                <p data-i18n="footer.schedule.sunday">Duminică: Închis</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.followUs.title">Urmărește-ne</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2024 AUTODOC. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
