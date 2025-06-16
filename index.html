@@ -18,9 +18,25 @@
                 <li><a href="#booking" data-i18n="nav.booking">Programare</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 <li class="language-selector">
-                    <a href="#" onclick="changeLanguage('ro')"><img src="ro.png" alt="Romania" class="flag-icon"></a>
-                    <a href="#" onclick="changeLanguage('ru')"><img src="ru.png" alt="Russia" class="flag-icon"></a>
-                    <a href="#" onclick="changeLanguage('en')"><img src="eng.png" alt="English" class="flag-icon"></a>
+                    <div class="custom-dropdown">
+                        <div class="selected-flag" onclick="toggleDropdown()">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="dropdown-content" id="language-dropdown">
+                            <div class="flag-option" onclick="changeLanguage('ro')">
+                                <img src="ro.png" alt="Romania" class="flag-icon">
+                                <span>RO</span>
+                            </div>
+                            <div class="flag-option" onclick="changeLanguage('ru')">
+                                <img src="ru.png" alt="Russia" class="flag-icon">
+                                <span>RU</span>
+                            </div>
+                            <div class="flag-option" onclick="changeLanguage('en')">
+                                <img src="eng.png" alt="English" class="flag-icon">
+                                <span>EN</span>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="official-site">
                     <a href="https://www.autodoc.md" target="_blank" class="our-site-link" data-i18n="nav.ourSite">

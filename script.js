@@ -358,4 +358,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+function toggleDropdown() {
+    const dropdown = document.getElementById('language-dropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Close the dropdown if user clicks outside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('language-dropdown');
+    const selectedFlag = document.querySelector('.selected-flag');
+    
+    if (!selectedFlag.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.remove('show');
+    }
 }); 

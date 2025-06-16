@@ -397,30 +397,68 @@ footer {
 /* Language Selector */
 .language-selector {
     margin-left: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
 }
 
-.language-selector a {
+.custom-dropdown {
+    position: relative;
     display: inline-block;
-    padding: 5px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
-.language-selector a:hover {
-    background-color: rgba(139, 0, 0, 0.1);
-    transform: translateY(-2px);
+.selected-flag {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+
+.selected-flag i {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+.selected-flag:hover i {
+    color: #ff4d4d;
+    transform: scale(1.1);
 }
 
 .flag-icon {
     width: 25px;
     height: 15px;
     object-fit: cover;
-    border: 1px solid #ddd;
-    border-radius: 2px;
     display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #8B0000;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.flag-option {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.flag-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.flag-option span {
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
